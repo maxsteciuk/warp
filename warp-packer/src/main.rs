@@ -30,10 +30,10 @@ const RUNNER_MAGIC: &[u8] = b"tVQhhsFFlGGD3oWV4lEPST8I8FEPP54IM0q7daes4E1y3p2U2w
 
 //TODO: 1. Uncomment warp-runner path for the platform where it is to be run
 //      2. Implement proper cross-platform handling
-//const RUNNER_LINUX_X64: &[u8] = include_bytes!("../../build/x86_64-unknown-linux-gnu/release/warp-runner");
-//const RUNNER_MACOS_X64: &[u8] = include_bytes!("../../build/x86_64-apple-darwin/release/warp-runner");
-//const RUNNER_WINDOWS_X64: &[u8] = include_bytes!("../../build/x86_64-pc-windows-gnu/release/warp-runner.exe");
-const RUNNER_FREEBSD_X64: &[u8] = include_bytes!("../../build/x86_64-unknown-freebsd/release/warp-runner");
+//const RUNNER_LINUX_X64: &[u8] = include_bytes!("../../target/x86_64-unknown-linux-gnu/release/warp-runner");
+//const RUNNER_MACOS_X64: &[u8] = include_bytes!("../../target/x86_64-apple-darwin/release/warp-runner");
+//const RUNNER_WINDOWS_X64: &[u8] = include_bytes!("../../target/x86_64-pc-windows-gnu/release/warp-runner.exe");
+const RUNNER_FREEBSD_X64: &[u8] = include_bytes!("../../target/x86_64-unknown-freebsd/release/warp-runner");
 
 lazy_static! {
     static ref RUNNER_BY_ARCH: HashMap<&'static str, &'static [u8]> = {

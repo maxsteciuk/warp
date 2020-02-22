@@ -9,6 +9,9 @@ else()
     set(triple x86_64-unknown-unknown)
 endif()
 
+file(MAKE_DIRECTORY ${CMAKE_SOURCE_DIR}/target)
+set(CMAKE_BINARY_DIR ${CMAKE_SOURCE_DIR}/target)
+
 set(BUILD_PACKER cargo build -p warp-packer --release --target ${triple})
 set(BUILD_RUNNER cargo build -p warp-runner --release --target ${triple})
 
